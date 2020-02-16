@@ -75,9 +75,8 @@ module.exports = {
       options: {
         path: `${__dirname}/src/markdown-pages`,
         name: `markdown-pages`,
-        ignore: `[**/.*]`,
       },
     },
     `gatsby-transformer-remark`,
   ]
-}
+};

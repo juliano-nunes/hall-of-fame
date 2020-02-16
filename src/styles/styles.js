@@ -9,3 +9,7 @@ export const Container = styled.div`
     justify-content: center;
     color: ${props => props.theme.primary}
 `;
+export const ProfilePhoto = styled.img`
+    border-radius: 50%;
+    width: 200px;
+`;
