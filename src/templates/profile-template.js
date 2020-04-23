@@ -1,22 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { Container } from '../styles/styles';
-import { ProfilePhoto } from '../styles/styles';
+import Profile from '../components/profile';
 
-export default function Template({data}) {
-    const { markdownRemark } = data;
-    const { frontmatter, html } = markdownRemark;
-    return (
-        <Container>
-                <h1>{frontmatter.name}</h1>
-                <ProfilePhoto src={frontmatter.photo} />
-                <div
-                    className="blog-post-content"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
-        </Container>
-    )
-}
+const ProfileTemplate = ({
+  data: {
+    markdownRemark: { frontmatter, html },
+  },
+}) => {
+  return <Profile profile={frontmatter} html={html} />;
+};
+export default ProfileTemplate
 
 export const pageQuery = graphql`
   query($path: String!) {

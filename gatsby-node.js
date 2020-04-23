@@ -4,7 +4,6 @@ exports.createPages = async ({actions, graphql, reporter}) => {
   const {createPage} = actions;
 
   const profileTemplate = path.resolve(`src/templates/profile-template.js`);
-
   const result = await graphql(`
     {
       allMarkdownRemark(
