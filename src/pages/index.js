@@ -1,5 +1,8 @@
 import React from "react"
 import ProfileLink from "../components/profile-link"
+import {FlexGrid, Body} from '../styles/styles';
+import SiteMetadata from '../../config/siteMetadata';
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -7,7 +10,7 @@ const IndexPage = ({
 }) => {
   const Profiles = edges
       .map(edge => <ProfileLink key={edge.node.id} profile={edge.node.frontmatter} />);
-  return <div>{Profiles}</div>
+  return <Body><h1>{SiteMetadata.title} - {SiteMetadata.company}</h1><FlexGrid>{Profiles}</FlexGrid></Body>
 };
 export default IndexPage
 

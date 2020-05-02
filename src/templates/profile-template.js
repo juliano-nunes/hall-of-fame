@@ -1,13 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Profile from '../components/profile';
+import { Body } from "../styles/styles";
 
 const ProfileTemplate = ({
   data: {
     markdownRemark: { frontmatter, html },
   },
 }) => {
-  return <Profile profile={frontmatter} html={html} />;
+  return <Body><Profile profile={frontmatter} html={html} /></Body>;
 };
 export default ProfileTemplate
 
