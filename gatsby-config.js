@@ -18,8 +18,8 @@ module.exports = {
         name: siteMetadata.title,
         short_name: siteMetadata.title,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: `#5d1499`,
+        theme_color: `#5d1499`,
         display: `standalone`,
         icon: `src/assets/icon.png`
       },
